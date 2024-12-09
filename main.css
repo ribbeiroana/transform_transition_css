@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+h1,
+h2 {
+  color: #4158D0;
+}
+
+.example {
+  margin: 20px 0;
+}
+
+.example button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4158D0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.example button:hover {
+  background-color: #FFCC70;
+}
+
+/* Especificações para cada exemplo */
+.translate:hover {
+  transform: translate(50px, 0);
+}
+
+.scale:hover {
+  transform: scale(1.5);
+}
+
+.rotate:hover {
+  transform: rotate(45deg);
+}
+
+.skew:hover {
+  transform: skew(20deg, 10deg);
+}
+
+.combined:hover {
+  transform: translate(30px, 20px) scale(1.2) rotate(15deg);
+}
+
+
+/* Especificações para transições */
+.opacity:hover {
+  opacity: 0.5;
+}
+
+.color:hover {
+  background-color: #C850C0;
+}
+
+.position:hover {
+  transform: translate(50px, 0);
+}
+
+/* Rotação completa */
+.rotate-full {
+  display: inline-block;
+  transition: transform 1s linear;
+}
+
+.rotate-full:hover {
+  transform: rotate(360deg);
+}
+
+.rotate-infinit {
+  display: inline-block;
+  animation: rotate 2s linear infinite;
+  /* animação contínua */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    /* Começa no ângulo 0 */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* Termina no ângulo 360 graus */
+  }
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4158D0;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card-buttons button:hover {
+  background-color: #FFCC70;
+}
+
+/* 1. Animação de pulso suave ao hover */
+.pulse-btn:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(240, 46, 170, 0.5) 10px 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* 2. Efeito de "brilho" lateral */
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+
+.shine-btn:hover::before {
+  left: 100%;
+}
+
+/* 3. Efeito de "pressionado" no clique */
+.press-btn:active {
+  transform: scale(0.95);
+  background-color: #C850C0;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 5px inset;
+}
+
+/* 4. Efeito de borda animada */
+.border-btn::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);
+  background-size: 300%;
+  border-radius: 6px;
+  animation: gradientBorder 3s infinite;
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 5. Efeito de "ondas" ao hover */
+.waves-btn::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.waves-btn:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* 6. Efeito de "quebra" no hover */
+.break-btn {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, box-shadow 0.4s, transform 0.4s;
+}
+
+.break-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(240, 46, 170, 0.6) 5px 10px 20px;
+}

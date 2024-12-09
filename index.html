@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform e Transition - Explicação e Exemplos</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <h1>Transform e Transition - Explicação e Exemplos</h1>
+  <p>As propriedades <strong>transform</strong> e <strong>transition</strong> permitem criar animações suaves e
+    transformar elementos de diversas formas. Abaixo, você encontrará exemplos detalhados com explicações e botões
+    interativos.</p>
+
+  <h2>Propriedade <code>transform</code></h2>
+  <p>A propriedade <strong>transform</strong> aplica transformações gráficas, como translação, escala, rotação e
+    inclinação.</p>
+
+  <div class="example">
+    <h3>1. Translate</h3>
+    <p><strong>translate(x, y):</strong> Move o elemento ao longo dos eixos X e Y.</p>
+    <p><em>Exemplo:</em> <code>transform: translate(50px, 0);</code></p>
+    <button class="translate">Mover (Translate)</button>
+  </div>
+
+  <div class="example">
+    <h3>2. Scale</h3>
+    <p><strong>scale(x, y):</strong> Aumenta ou reduz o tamanho do elemento.</p>
+    <p><em>Exemplo:</em> <code>transform: scale(1.5);</code></p>
+    <button class="scale">Aumentar (Scale)</button>
+  </div>
+
+  <div class="example">
+    <h3>3. Rotate</h3>
+    <p><strong>rotate(angle):</strong> Rotaciona o elemento em torno de seu ponto central.</p>
+    <p><em>Exemplo:</em> <code>transform: rotate(45deg);</code></p>
+    <button class="rotate">Girar (Rotate)</button>
+  </div>
+
+  <div class="example">
+    <h3>4. Skew</h3>
+    <p><strong>skew(x, y):</strong> Inclina o elemento ao longo dos eixos X e Y.</p>
+    <p><em>Exemplo:</em> <code>transform: skew(20deg, 10deg);</code></p>
+    <button class="skew">Inclinar (Skew)</button>
+  </div>
+
+  <div class="example">
+    <h3>5. Combinação de Transformações</h3>
+    <p><strong>Transformações combinadas:</strong> Você pode combinar várias transformações para criar efeitos mais
+      complexos.</p>
+    <p><em>Exemplo:</em> <code>transform: translate(30px, 20px) scale(1.2) rotate(15deg);</code></p>
+    <button class="combined">Combinar Transformações</button>
+  </div>
+
+
+  <h1>Propriedade Transition - Explicação Detalhada</h1>
+  <p>A propriedade <strong>transition</strong> permite animar mudanças suaves entre os estados de um elemento. Abaixo,
+    você encontrará detalhes e exemplos de como usá-la.</p>
+
+  <h2>Componentes de <code>transition</code></h2>
+  <ul>
+    <li><strong>Propriedade:</strong> Define a propriedade CSS que será animada, como <code>opacity</code>,
+      <code>background-color</code>, <code>transform</code>, etc.
+    </li>
+    <li><strong>Duração:</strong> Define o tempo da animação, como <code>1s</code> (1 segundo) ou <code>500ms</code>
+      (500 milissegundos).</li>
+    <li><strong>Função de tempo (timing function):</strong> Controla a aceleração da animação:
+      <ul>
+        <li><code>ease</code>: Começa devagar, acelera no meio e desacelera no final.</li>
+        <li><code>linear</code>: Velocidade constante do início ao fim.</li>
+        <li><code>ease-in</code>: Começa devagar e acelera.</li>
+        <li><code>ease-out</code>: Começa rápido e desacelera.</li>
+        <li><code>ease-in-out</code>: Começa devagar, acelera no meio e desacelera no final.</li>
+      </ul>
+    </li>
+    <li><strong>Atraso:</strong> Define um atraso antes de iniciar a transição.</li>
+  </ul>
+
+  <h2>Exemplos Práticos</h2>
+
+  <div class="example">
+    <h3>1. Alterando Opacidade</h3>
+    <p><em>Exemplo:</em> <code>transition: opacity 0.5s ease;</code></p>
+    <button class="opacity">Passe o mouse</button>
+  </div>
+
+  <div class="example">
+    <h3>2. Alterando Cor</h3>
+    <p><em>Exemplo:</em> <code>transition: background-color 0.5s ease;</code></p>
+    <button class="color">Passe o mouse</button>
+  </div>
+
+  <div class="example">
+    <h3>3. Alterando Posição</h3>
+    <p><em>Exemplo:</em> <code>transition: transform 0.5s ease;</code></p>
+    <button class="position">Passe o mouse</button>
+  </div>
+
+  <h2>Rotação Completa com <code>rotate</code></h2>
+  <p>Para girar um elemento completamente (360°), usamos a propriedade <code>transform: rotate(360deg);</code> combinada
+    com <code>transition</code> para criar uma animação suave.</p>
+
+  <div class="example">
+    <h3>Exemplo: Rotação Completa</h3>
+    <p><em>Exemplo:</em> <code>transition: transform 1s linear;</code></p>
+    <div class="rotate-full">
+      <button>Girar</button>
+    </div>
+
+
+    <div style="margin: 1rem ;" class="rotate-infinit">
+      <button>Girar</button>
+    </div>
+  </div>
+
+
+  <p><strong>Observação:</strong> A rotação de 360° retorna o elemento à sua posição inicial, criando uma animação
+    contínua e suave.</p>
+
+  <h1>Exemplos de Efeitos de Animação de Botões</h1>
+
+  <div class="example">
+    <a href="./main.html"><button>Ver exemplos</button></a>
+  </div>
+
+</body>
+
+</html>
